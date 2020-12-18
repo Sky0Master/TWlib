@@ -1,3 +1,4 @@
+#pragma once
 #ifndef _TW_INPUT_H_
 #define _TW_INPUT_H_
 
