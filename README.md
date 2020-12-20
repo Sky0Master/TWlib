@@ -1,5 +1,5 @@
 # TWlib
-some useful classes and funtions  
+**使用VS编译时请把项目属性中的字符集改为未设置**
 
 + #### twconsole.hpp <br>
   some interesting functions work in console
