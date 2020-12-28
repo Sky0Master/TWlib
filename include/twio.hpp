@@ -31,15 +31,15 @@
 
 
  // 读取二进制文件，返回文件大小
- size_t readBinaryFile(const char* filename, unsigned char* data);  //unsigned char也可写作byte，BYTE
+ size_t readBinaryFile(const char* filename,unsigned char* & data);  //unsigned char也可写作byte，BYTE
 
 
  //写入二进制文件
- size_t writeBinaryFile(const char* filename, unsigned char* data, size_t size);  //size：要写入的数据大小(单位：字节)
+ size_t writeBinaryFile(const char* filename,const unsigned char* data, size_t size);  //size：要写入的数据大小(单位：字节)
 
 
 template<typename OB>
-void saveObject(const char* filename, OB& object); //传入要保存的对象引用
+void saveObject(const char* filename, OB & object); //传入要保存的对象引用
 
 
 template<typename OB>

@@ -63,7 +63,7 @@ inline size_t getFileSize(const char * filename)
     return size;
 }
 
-inline size_t readBinaryFile(const char * filename,unsigned char * data) //unsigned char也可写作byte，BYTE
+inline size_t readBinaryFile(const char * filename,unsigned char* & data) //unsigned char也可写作byte，BYTE
 {
     FILE* fp;
     fopen_s(&fp,filename, "rb");
@@ -77,7 +77,7 @@ inline size_t readBinaryFile(const char * filename,unsigned char * data) //unsig
     return size;
 }
 
-inline size_t writeBinaryFile(const char* filename, unsigned char* data, size_t size)  //size：要写入的数据大小(单位：字节)
+inline size_t writeBinaryFile(const char* filename,const unsigned char* data, size_t size)  //size：要写入的数据大小(单位：字节)
 {
     FILE* fp;
     fopen_s(&fp,filename, "wb");
@@ -88,7 +88,7 @@ inline size_t writeBinaryFile(const char* filename, unsigned char* data, size_t 
 }
 
 template<typename OB>
-inline void saveObject(const char*filename,OB & object) //传入要保存的对象引用
+inline void saveObject(const char*filename, OB & object) //传入要保存的对象引用
 {
     ofstream osm(filename, ios::out | ios::binary);
     osm.write((const char *)&object,sizeof(OB));
