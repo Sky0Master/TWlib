@@ -13,8 +13,6 @@ string read_Textfile(const char * filename)             //返回全部文本
         text+=ch;
     fclose(fp);
     return text;
-    
-
 }
 
 size_t write_Textfile(const char * filename , string text) //从文件开头位置写入 返回成功写入的字节数
